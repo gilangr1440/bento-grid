@@ -1,0 +1,554 @@
+$purple100: hsl(254, 88%, 90%);
+$purple500: hsl(256, 67%, 59%);
+
+$yellow100: hsl(31, 66%, 93%);
+$yellow500: hsl(39, 100%, 71%);
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 7%);
+
+@font-face {
+  src: url("../../assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
+  font-family: "DM Sans";
+  font-style: italic;
+}
+
+@font-face {
+  src: url("../../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf");
+  font-family: "DM Sans";
+  font-style: normal;
+}
+
+$dm-sans: "DM Sans", sans-serif;
+
+body {
+  background-color: #f5f5f5;
+}
+
+.grid-container {
+  width: 90%;
+  font-family: $dm-sans;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 30px;
+  margin: 50px auto;
+
+  @at-root .grid1 {
+    width: 100%;
+    text-align: center;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: $purple500;
+    color: $white;
+    border-radius: 10px;
+
+    @at-root #{&}__header {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    @at-root #{&}__header_color_old-yellow {
+      color: $yellow500;
+    }
+
+    @at-root #{&}__header_style_italic {
+      font-style: italic;
+    }
+
+    @at-root #{&}__icon {
+      width: 70%;
+      margin-bottom: 10px;
+    }
+  }
+
+  @at-root .grid2 {
+    background-color: $white;
+    padding: 18px;
+    border-radius: 10px;
+
+    @at-root #{&}__social-media-container {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    @at-root #{&}__social-media-icon {
+      width: 100%;
+    }
+
+    @at-root #{&}__text {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  @at-root .grid3 {
+    background-color: $yellow500;
+    padding: 18px;
+    border-radius: 10px;
+    position: relative;
+    height: 170px;
+    overflow-y: hidden;
+
+    @at-root #{&}__text {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    @at-root #{&}__image {
+      width: 200px;
+      position: absolute;
+      bottom: -20px;
+    }
+  }
+
+  @at-root .grid4 {
+    background-color: $purple100;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+
+    @at-root #{&}__header {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 15px 0 25px 0;
+    }
+
+    @at-root #{&}__image {
+      width: 100%;
+    }
+
+    @at-root #{&}__text {
+      font-weight: 500;
+      margin: 25px 0 15px 0;
+    }
+  }
+
+  @at-root .grid5 {
+    background-color: $purple500;
+    text-align: center;
+    padding: 23px 50px;
+    height: fit-content;
+    border-radius: 10px;
+
+    @at-root #{&}__image {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    @at-root #{&}__text {
+      font-size: 2rem;
+      font-weight: 500;
+      color: $white;
+    }
+  }
+
+  @at-root .grid6 {
+    background-color: white;
+    padding: 18px;
+    border-radius: 10px;
+
+    @at-root #{&}__header {
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    @at-root #{&}__header_text_break-line {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    @at-root #{&}__image {
+      width: 185px;
+    }
+  }
+
+  @at-root .grid7 {
+    background-color: $yellow100;
+    padding: 30px;
+    border-radius: 10px;
+    height: fit-content;
+
+    @at-root #{&}__header {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin: 5px 0 20px 0;
+    }
+
+    @at-root #{&}__header_color_violet {
+      color: $purple500;
+      font-style: italic;
+    }
+
+    @at-root #{&}__image {
+      width: 180px;
+    }
+  }
+
+  @at-root .grid8 {
+    background-color: $yellow500;
+    padding: 18px;
+    border-radius: 10px;
+
+    @at-root #{&}__header {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    @at-root #{&}__image {
+      width: 70%;
+    }
+  }
+
+  @at-root .grid9 {
+    display: none;
+  }
+}
+
+@at-root footer {
+  margin: 10px 0;
+  font-family: $dm-sans;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  @at-root .grid5__image {
+    width: 200px;
+  }
+
+  @at-root .grid4__image {
+    width: 300px;
+  }
+
+  @at-root .grid8__image {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "grid1 grid1"
+      "grid2 grid3"
+      "grid8 grid8"
+      "grid4 grid6"
+      "grid4 grid7"
+      "grid5 grid5";
+
+    @at-root .grid1 {
+      grid-area: grid1;
+      height: 250px;
+
+      @at-root .grid1__icon {
+        width: 50%;
+      }
+    }
+
+    @at-root .grid2 {
+      grid-area: grid2;
+    }
+
+    @at-root .grid3 {
+      grid-area: grid3;
+    }
+
+    @at-root .grid4 {
+      grid-area: grid4;
+    }
+
+    @at-root .grid5 {
+      grid-area: grid5;
+      display: flex;
+      gap: 10px;
+
+      @at-root .grid5__image {
+        width: 40%;
+        margin-bottom: 0;
+      }
+
+      @at-root .grid5__text {
+        text-align: start;
+        align-self: center;
+      }
+    }
+
+    @at-root .grid6 {
+      grid-area: grid6;
+    }
+
+    @at-root .grid7 {
+      grid-area: grid7;
+      height: auto;
+    }
+
+    @at-root .grid8 {
+      grid-area: grid8;
+      display: flex;
+      gap: 10px;
+
+      @at-root .grid8__header {
+        align-self: center;
+      }
+
+      @at-root .grid8__image {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "grid7 grid1 grid1"
+      "grid7 grid2 grid3"
+      "grid8 grid6 grid5"
+      "grid4 grid4 grid4";
+
+    @at-root .grid7 {
+      grid-area: grid7;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px;
+
+      @at-root .grid7__header {
+        font-size: 3rem;
+      }
+    }
+
+    @at-root .grid8 {
+      grid-area: grid8;
+      flex-direction: column;
+      padding: 30px;
+
+      @at-root .grid8__image {
+        width: 80%;
+      }
+    }
+
+    @at-root .grid1 {
+      grid-area: grid1;
+    }
+
+    @at-root .grid2 {
+      grid-area: grid2;
+    }
+
+    @at-root .grid3 {
+      grid-area: grid3;
+    }
+
+    @at-root .grid4 {
+      grid-area: grid4;
+
+      @at-root .grid4__image {
+        width: 300px;
+      }
+    }
+
+    @at-root .grid6 {
+      grid-area: grid6;
+    }
+
+    @at-root .grid5 {
+      grid-area: grid5;
+      padding: 30px;
+      height: auto;
+      flex-direction: column;
+
+      @at-root .grid5__image {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .grid-container {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 250px 250px;
+    grid-template-areas:
+      "grid9 grid1 grid1 grid4"
+      "grid9 grid2 grid3 grid4"
+      "grid9 grid6 grid5 grid5";
+    margin: 100px auto;
+
+    @at-root .grid7 {
+      display: none;
+    }
+
+    @at-root .grid8 {
+      display: none;
+    }
+
+    @at-root .grid1 {
+      grid-area: grid1;
+      height: auto;
+      padding: 40px;
+
+      @at-root .grid1__header {
+        font-size: 3.5rem;
+      }
+
+      @at-root .grid1__icon {
+        width: 40%;
+      }
+    }
+
+    @at-root .grid2 {
+      grid-area: grid2;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+
+      @at-root .grid2__social-media-container {
+        width: calc(100% + 25px);
+        height: 35%;
+        position: relative;
+        margin: 0;
+        overflow: scroll;
+
+        @at-root .grid2__social-media-icon {
+          position: absolute;
+          left: 0;
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      @at-root .grid2__text {
+        font-size: 1.8rem;
+      }
+    }
+
+    @at-root .grid3 {
+      grid-area: grid3;
+      height: auto;
+      padding: 20px;
+
+      @at-root .grid3__text {
+        font-size: 1.8rem;
+      }
+
+      @at-root .grid3__image {
+        bottom: -70px;
+        width: calc(100% - 40px);
+      }
+    }
+
+    @at-root .grid4 {
+      padding: 30px;
+      grid-area: grid4;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      overflow: hidden;
+
+      @at-root .grid4__header {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+      }
+
+      @at-root .grid4__image-container {
+        position: relative;
+        height: 70%;
+        overflow: scroll;
+        width: calc(100% + 30px);
+      }
+
+      @at-root .grid4__image {
+        position: absolute;
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    @at-root .grid6 {
+      grid-area: grid6;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+
+      @at-root .grid6__header {
+        margin-bottom: 0;
+      }
+
+      @at-root .grid6__header_text_break-line {
+        font-size: 3.8rem;
+        margin-bottom: 10px;
+      }
+    }
+
+    @at-root .grid5 {
+      grid-area: grid5;
+      flex-direction: row;
+
+      @at-root .grid5__image {
+        width: auto;
+      }
+
+      @at-root .grid5__text {
+        font-size: 2.4rem;
+      }
+    }
+
+    @at-root .grid9 {
+      grid-area: grid9;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 30px;
+
+      @at-root .grid9__first {
+        padding: 33px;
+        background-color: $yellow100;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      @at-root .grid9__second {
+        padding: 25px;
+        background-color: $yellow500;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      @at-root .grid9__header {
+        font-size: 2.2rem;
+        font-weight: 600;
+      }
+
+      @at-root .grid9__header_color_violet {
+        color: $purple500;
+        font-style: italic;
+      }
+
+      @at-root .grid9__image {
+        width: 100%;
+      }
+    }
+  }
+}
