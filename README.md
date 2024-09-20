@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL here](https://your-solution-url.com)
-- Live Site URL: [live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL here](https://gilangr1440.github.io/bento-grid/)
+- Live Site URL: [live site URL here](https://www.frontendmentor.io/solutions/bento-grid-tCyf0fMFT5)
 
 ## My process
 
